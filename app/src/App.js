@@ -27,20 +27,6 @@ function App() {
     setTextList([]);
   }
 
-  const [text2, setText2] = useState('');
-  const onChangeText2 = (event) => {
-    setText2(event.target.value);
-  }
-  const [textList2, setTextList2] = useState([]);
-  const onClickTextButton2 = () => {
-    const newTextList2 = [...textList2, text2];
-    setTextList2(newTextList2);
-    setText2('');
-  }
-  const onClickTextReset2 = () => {
-    setTextList2([]);
-  }
-
   return (
     <div>
       <div>
@@ -56,17 +42,6 @@ function App() {
         <button onClick={onClickTextReset}>Reset Text</button>
         <ul>
           {textList.map((elem, idx) => {
-            return <li key={idx}>{`${idx}: ${elem}`}</li>
-          })}
-
-        </ul>
-      </div>
-      <div>
-        <input onChange={onChangeText2} value={text2}></input>
-        <button onClick={onClickTextButton2}>Add List</button>
-        <button onClick={onClickTextReset2}>Reset Text</button>
-        <ul>
-          {textList2.map((elem, idx) => {
             return <li key={idx}>{`${idx}: ${elem}`}</li>
           })}
 
