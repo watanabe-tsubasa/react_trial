@@ -10,7 +10,7 @@ export const Card = (props) => {
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     margin: '8px',
     boxSizing: 'border-box',
-    height: '300px'
+    minHeight: '300px'
   };
   
   const imageStyle = {
